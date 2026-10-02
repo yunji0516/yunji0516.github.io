@@ -1,6 +1,5 @@
 {
   "MOT-E01": {
-    "url": "https://plc.damilab.cc/replay?task=MOT-E01&labels=0",
     "first_scan": 0,
     "last_frame_index": 157,
     "source_duration_ms": 1570.0,
@@ -30,7 +29,6 @@
     "browser_errors": []
   },
   "MAT-E01": {
-    "url": "https://plc.damilab.cc/replay?task=MAT-E01&labels=0",
     "first_scan": 0,
     "last_frame_index": 62,
     "source_duration_ms": 620.0,
@@ -60,7 +58,6 @@
     "browser_errors": []
   },
   "MOT-M14": {
-    "url": "https://plc.damilab.cc/replay?task=MOT-M14&labels=0",
     "first_scan": 0,
     "last_frame_index": 369,
     "source_duration_ms": 3690.0,
@@ -90,7 +87,6 @@
     "browser_errors": []
   },
   "MAT-M04": {
-    "url": "https://plc.damilab.cc/replay?task=MAT-M04&labels=0",
     "first_scan": 0,
     "last_frame_index": 1279,
     "source_duration_ms": 12790.0,
@@ -120,7 +116,6 @@
     "browser_errors": []
   },
   "MOT-H15": {
-    "url": "https://plc.damilab.cc/replay?task=MOT-H15&labels=0",
     "first_scan": 0,
     "last_frame_index": 3682,
     "source_duration_ms": 73640.0,
@@ -202,7 +197,6 @@
     "browser_errors": []
   },
   "MAT-H01": {
-    "url": "https://plc.damilab.cc/replay?task=MAT-H01&labels=0",
     "first_scan": 0,
     "last_frame_index": 10290,
     "source_duration_ms": 102900.0,

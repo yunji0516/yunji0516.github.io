@@ -13,14 +13,13 @@
   <title>PLCWorld — Closed-Loop Plant Simulation</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
-  <script src="app.js" defer></script>
+  <script src="app.js?v=25370f935953" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <a class="wordmark" href="#" aria-label="PLCWorld home"><span class="brand-icon" aria-hidden="true">P</span>PLC<span>World</span></a>
     <nav aria-label="Main navigation"><a href="#overview">Overview</a><a href="#tasks">Tasks</a><a href="#results">Results</a><a href="#citation">Citation</a></nav>
-    <a class="header-link" href="https://plc.damilab.cc/replay" target="_blank" rel="noopener">Open simulator <span aria-hidden="true">↗</span></a>
   </header>
   <main id="main">
     <section class="hero container">
@@ -29,7 +28,7 @@
       <p class="authors"><span>Yunji Kim<sup>1,*</sup></span><span>Yunseok Lee<sup>1,*</sup></span><span>Hyunwoo Seo<sup>2</sup></span><span>Jaerim Choi<sup>2</sup></span><span>Woojin Lee<sup>1,†</sup></span></p>
       <p class="affiliations"><span><sup>1</sup> Dongguk University</span><span><sup>2</sup> MOAI technologies</span></p>
       <p class="author-notes">* Equal contribution &nbsp; · &nbsp; † Corresponding author</p>
-      <div class="hero-actions"><a class="button primary" href="assets/paper/PLCWorld.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zM14 2v6h6M8 13h8M8 17h6"/></svg>Read the paper</a><a class="button" href="#tasks"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 11 7-11 7z"/></svg>Watch task replays</a><a class="button" href="https://plc.damilab.cc/replay" target="_blank" rel="noopener">Try the simulator <span aria-hidden="true">↗</span></a></div>
+      <div class="hero-actions"><a class="button primary" href="assets/paper/PLCWorld.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zM14 2v6h6M8 13h8M8 17h6"/></svg>Read the paper</a><a class="button" href="#tasks"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 11 7-11 7z"/></svg>Watch task replays</a></div>
       <div class="hero-showcase">
         <div class="showcase-video"><video muted loop playsinline controls preload="none" poster="assets/posters/MAT-H01.webp" data-src="assets/videos/MAT-H01.mp4" aria-label="Reference replay of a shared robot coordinating two machining cells"></video><div class="showcase-label"><span class="live-dot"></span> Inside PLCWorld <span class="showcase-task">Shared robot &amp; machining cells</span></div></div>
         <div class="showcase-copy"><p class="eyebrow">From code to consequences</p><h2>What happens<br> after the program runs?</h2><p>Follow each control command through device motion, workpiece transfer, and sensor feedback.</p><a href="#overview">Explore the execution loop <span aria-hidden="true">↓</span></a><div class="mini-loop" aria-label="PLC program sends commands to the plant, which returns sensor feedback"><span>PLC program</span><span aria-hidden="true">⇄</span><span>Plant</span></div></div>
@@ -53,7 +52,6 @@
         <div id="task-grid" class="task-grid"></div>
         <noscript><p>Enable JavaScript for the filterable gallery. <a href="assets/videos/MOT-E01.mp4">Motion Easy</a> · <a href="assets/videos/MOT-M14.mp4">Motion Medium</a> · <a href="assets/videos/MOT-H15.mp4">Motion Hard</a> · <a href="assets/videos/MAT-E01.mp4">Material Easy</a> · <a href="assets/videos/MAT-M04.mp4">Material Medium</a> · <a href="assets/videos/MAT-H01.mp4">Material Hard</a></p></noscript>
         <p class="gallery-note">Reference-program replays, with close camera views. Motion speed is relative to simulation time, with brief holds at the beginning and end. Each clip illustrates one execution condition. <a href="assets/figures/figure3.webp" target="_blank" rel="noopener">Compare with Figure 3 ↗</a></p>
-        <div class="center"><a class="button" href="https://plc.damilab.cc/replay" target="_blank" rel="noopener">Explore all tasks in the simulator <span aria-hidden="true">↗</span></a></div>
       </div>
     </section>
 
