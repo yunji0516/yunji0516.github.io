@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="PLCWorld couples PLC program execution with simulated plant responses. A benchmark of 100 tasks across Motion Control and Material Handling.">
+  <meta name="theme-color" content="#ffffff">
+  <meta property="og:title" content="PLCWorld: Benchmarking LLM-Generated PLC Programs in Closed-Loop Plant Simulation">
+  <meta property="og:description" content="100 tasks. 473 execution conditions. Evaluate what PLC programs actually do in a simulated plant.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yunji0516.github.io/PLCWorld/">
+  <link rel="canonical" href="https://yunji0516.github.io/PLCWorld/">
+  <title>PLCWorld — Closed-Loop Plant Simulation</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="wordmark" href="#" aria-label="PLCWorld home"><span class="brand-icon" aria-hidden="true">P</span>PLC<span>World</span></a>
+    <nav aria-label="Main navigation"><a href="#overview">Overview</a><a href="#tasks">Tasks</a><a href="#results">Results</a><a href="#citation">Citation</a></nav>
+    <a class="header-link" href="https://plc.damilab.cc/replay" target="_blank" rel="noopener">Open simulator <span aria-hidden="true">↗</span></a>
+  </header>
+  <main id="main">
+    <section class="hero container">
+      <p class="eyebrow"><span class="status-dot"></span> A benchmark for industrial control · Preprint 2026</p>
+      <h1><span class="hero-name">PLC<span>World</span></span><span class="hero-title">Benchmarking LLM-Generated PLC Programs<br class="desktop-break"> in Closed-Loop Plant Simulation</span></h1>
+      <p class="authors"><span>Yunji Kim<sup>1,*</sup></span><span>Yunseok Lee<sup>1,*</sup></span><span>Hyunwoo Seo<sup>2</sup></span><span>Jaerim Choi<sup>2</sup></span><span>Woojin Lee<sup>1,†</sup></span></p>
+      <p class="affiliations"><span><sup>1</sup> Dongguk University</span><span><sup>2</sup> MOAI technologies</span></p>
+      <p class="author-notes">* Equal contribution &nbsp; · &nbsp; † Corresponding author</p>
+      <div class="hero-actions"><a class="button primary" href="assets/paper/PLCWorld.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zM14 2v6h6M8 13h8M8 17h6"/></svg>Read the paper</a><a class="button" href="#tasks"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 11 7-11 7z"/></svg>Watch task replays</a><a class="button" href="https://plc.damilab.cc/replay" target="_blank" rel="noopener">Try the simulator <span aria-hidden="true">↗</span></a></div>
+      <div class="hero-showcase">
+        <div class="showcase-video"><video muted loop playsinline controls preload="none" poster="assets/posters/MAT-H01.webp" data-src="assets/videos/MAT-H01.mp4" aria-label="Reference replay of a shared robot coordinating two machining cells"></video><div class="showcase-label"><span class="live-dot"></span> Inside PLCWorld <span class="showcase-task">Shared robot &amp; machining cells</span></div></div>
+        <div class="showcase-copy"><p class="eyebrow">From code to consequences</p><h2>What happens<br> after the program runs?</h2><p>Follow each control command through device motion, workpiece transfer, and sensor feedback.</p><a href="#overview">Explore the execution loop <span aria-hidden="true">↓</span></a><div class="mini-loop" aria-label="PLC program sends commands to the plant, which returns sensor feedback"><span>PLC program</span><span aria-hidden="true">⇄</span><span>Plant</span></div></div>
+      </div>
+      <dl class="stats"><div><dt>100</dt><dd>Synthetic tasks</dd></div><div><dt>473</dt><dd>Task–condition pairs</dd></div><div><dt>2</dt><dd>Task suites</dd></div><div><dt>3</dt><dd>Dependency scopes</dd></div></dl>
+    </section>
+
+    <section id="overview" class="section container">
+      <div class="section-heading"><p class="eyebrow">01 / Overview</p><h2>Evaluate programs through plant execution.</h2></div>
+      <div class="abstract-copy"><p>Programmable logic controllers (PLCs) coordinate industrial equipment by reading sensor inputs and issuing control commands. To assess an LLM-generated PLC program, we need to observe how those commands affect device and workpiece states.</p><p><strong>PLCWorld</strong> couples Structured Text (ST) execution with simulated plant responses and sensor feedback in a common closed-loop environment. It provides <strong>100 synthetic tasks and 473 registered task–condition pairs</strong> across Motion Control and Material Handling, grounded in control relations identified in industrial PLC programs and engineering documentation.</p><p>Our protocol measures <strong>Task Success</strong> and <strong>Safety Violation</strong> separately. Comparing these outcomes with submission-profile acceptance reveals the <strong>Execution Gap</strong>: programs that pass an upstream check can still fail their task or violate a constraint during execution.</p></div>
+      <figure class="paper-figure framework"><img src="assets/figures/figure2.webp" width="4912" height="2538" loading="lazy" alt="PLCWorld framework: task specifications guide ST generation; a PLC runtime and simulated plant exchange control outputs and sensor feedback; execution records determine task success, safety violations, and the execution gap."><figcaption>The PLCWorld framework. Generated programs interact with the plant through repeated PLC scans.</figcaption></figure>
+      <div class="outcomes"><article><span class="outcome-icon success" aria-hidden="true">✓</span><h3>Task Success</h3><p>Reach the required goal state with the specified events, ordering, and hold conditions.</p></article><article><span class="outcome-icon safety" aria-hidden="true">!</span><h3>Safety Violation</h3><p>Track breaches of specified constraints throughout execution, including after completion claims.</p></article><article><span class="outcome-icon gap" aria-hidden="true">↔</span><h3>Execution Gap</h3><p>Measure task failure or observed violation among cases whose programs pass the upstream check.</p></article></div>
+    </section>
+
+    <section id="tasks" class="section task-section">
+      <div class="container">
+        <div class="section-heading"><p class="eyebrow">02 / Tasks in motion</p><h2>Two suites. Three scopes of control.</h2><p>Six representative tasks from Figure 3 of the paper, recorded in the PLCWorld replay viewer.</p></div>
+        <div class="scope-grid"><div><span class="level easy">Easy</span><h3>Within one function</h3><p>Coordinate a basic control operation.</p><small>15 tasks per suite</small></div><div><span class="level medium">Medium</span><h3>Between functions</h3><p>Connect the dependent functions of one job.</p><small>20 tasks per suite</small></div><div><span class="level hard">Hard</span><h3>Between jobs</h3><p>Coordinate independent jobs sharing resources.</p><small>15 tasks per suite</small></div></div>
+        <div class="gallery-toolbar"><div class="filter-group" role="group" aria-label="Filter tasks by suite"><button class="filter active" data-suite="all" aria-pressed="true">All tasks</button><button class="filter" data-suite="motion" aria-pressed="false">Motion Control</button><button class="filter" data-suite="material" aria-pressed="false">Material Handling</button></div><button id="toggle-videos" class="text-button" aria-pressed="false">Pause videos</button></div>
+        <p id="gallery-status" class="sr-only" aria-live="polite">Showing all 6 tasks</p>
+        <div id="task-grid" class="task-grid"></div>
+        <noscript><p>Enable JavaScript for the filterable gallery. <a href="assets/videos/MOT-E01.mp4">Motion Easy</a> · <a href="assets/videos/MOT-M14.mp4">Motion Medium</a> · <a href="assets/videos/MOT-H15.mp4">Motion Hard</a> · <a href="assets/videos/MAT-E01.mp4">Material Easy</a> · <a href="assets/videos/MAT-M04.mp4">Material Medium</a> · <a href="assets/videos/MAT-H01.mp4">Material Hard</a></p></noscript>
+        <p class="gallery-note">Reference-program replays, with close camera views. Motion speed is relative to simulation time, with brief holds at the beginning and end. Each clip illustrates one execution condition. <a href="assets/figures/figure3.webp" target="_blank" rel="noopener">Compare with Figure 3 ↗</a></p>
+        <div class="center"><a class="button" href="https://plc.damilab.cc/replay" target="_blank" rel="noopener">Explore all tasks in the simulator <span aria-hidden="true">↗</span></a></div>
+      </div>
+    </section>
+
+    <section id="results" class="section container">
+      <div class="section-heading"><p class="eyebrow">03 / Evaluation</p><h2>Completion and safety tell different stories.</h2><p>Six LLMs and four adapted generation-and-verification workflows, evaluated under a common protocol.</p></div>
+      <div class="results-feature"><div><p class="eyebrow">Direct GPT-5.5 · Pooled by case count</p><h3>Performance drops as the scope of coordination grows.</h3><div class="bar-chart" aria-label="GPT-5.5 task success: Easy 82.70 percent, Medium 84.09 percent, Hard 25.10 percent"><div><span>Easy</span><i style="--value:82.70%;--bar:var(--teal)"></i><strong>82.70%</strong></div><div><span>Medium</span><i style="--value:84.09%;--bar:var(--blue)"></i><strong>84.09%</strong></div><div><span>Hard</span><i style="--value:25.10%;--bar:var(--rust)"></i><strong>25.10%</strong></div></div><p class="fine-print">Task Success across both suites. These comparisons describe different task groups; they do not isolate the effect of dependency scope.</p></div><figure><img src="assets/figures/figure5.webp" width="388" height="364" loading="lazy" alt="Paper Figure 5 compares suite-combined success rates by difficulty for direct models and adapted workflows."><figcaption>Success rate by difficulty, as reported in the paper.</figcaption></figure></div>
+      <div class="results-toolbar"><div class="filter-group" role="group" aria-label="Evaluation setting"><button class="filter active" data-setting="direct" aria-pressed="true">Direct generation</button><button class="filter" data-setting="frameworks" aria-pressed="false">Adapted workflows</button></div><label>Task suite <select id="result-suite"><option value="motion">Motion Control</option><option value="material">Material Handling</option></select></label></div>
+      <div class="table-scroll" tabindex="0" role="region" aria-label="Evaluation results, scroll horizontally on small screens"><table><caption id="results-caption">Direct ST generation · Motion Control · Results (%)</caption><thead><tr><th scope="col" rowspan="2">Model / Method</th><th scope="colgroup" colspan="2">Easy</th><th scope="colgroup" colspan="2">Medium</th><th scope="colgroup" colspan="2">Hard</th><th scope="col" rowspan="2">Execution<br>Gap ↓</th></tr><tr><th scope="col">SR ↑</th><th scope="col">SVR ↓</th><th scope="col">SR ↑</th><th scope="col">SVR ↓</th><th scope="col">SR ↑</th><th scope="col">SVR ↓</th></tr></thead><tbody id="results-body"></tbody></table></div>
+      <p class="fine-print">SR: Task Success rate. SVR: Safety Violation rate among cases entering plant execution. Execution Gap is pooled across suites and conditional on submission-profile acceptance. Direct rows pool three independent generations per task; workflow comparisons use a matched GPT-5.5 baseline.</p>
+      <div class="validation-strip"><strong>Validation beyond the reference program</strong><p>Practitioner review, alternative programs, specification–evaluator alignment checks, and independent ST-runtime comparisons. All <strong>542 targeted counterexamples</strong> activate their designated rules under at least one registered condition.</p></div>
+    </section>
+
+    <section class="section insight-section"><div class="container"><div class="section-heading"><p class="eyebrow">04 / The execution gap</p><h2>A command is only the beginning.</h2><p>The same accepted program can produce different outcomes as device response times change.</p></div><figure class="paper-figure"><img src="assets/figures/figure1.webp" width="4442" height="1812" loading="lazy" alt="An ST program closes a gripper and waits 500 milliseconds before lifting. A faster grasp succeeds; a slower grasp leaves the workpiece unheld, so lifting fails despite passing the upstream acceptance check."><figcaption>Figure 1. A fixed delay can elapse before a workpiece is securely held. Plant execution exposes the consequence.</figcaption></figure></div></section>
+
+    <section id="citation" class="section container citation-section"><div class="section-heading"><p class="eyebrow">05 / Citation</p><h2>Build on PLCWorld.</h2><p>If you use PLCWorld in your research, please cite our preprint.</p></div><div class="citation-box"><div class="citation-top"><span>BibTeX</span><button id="copy-citation" class="text-button">Copy citation</button><span id="copy-status" class="sr-only" aria-live="polite"></span></div><pre><code id="bibtex">@misc{kim2026plcworld,
+  title  = {PLCWorld: Benchmarking LLM-Generated PLC Programs
+            in Closed-Loop Plant Simulation},
+  author = {Kim, Yunji and Lee, Yunseok and Seo, Hyunwoo
+            and Choi, Jaerim and Lee, Woojin},
+  year   = {2026},
+  note   = {Preprint}
+}</code></pre></div></section>
+  </main>
+  <footer class="site-footer container"><a class="wordmark" href="#">PLC<span>World</span></a><p>Dongguk University &amp; MOAI technologies</p><p class="fine-print">Website layout inspired by <a href="https://vlabench.github.io/" target="_blank" rel="noopener">VLABench</a>. Figures and task replays from PLCWorld.</p></footer>
+</body>
+</html>

@@ -1,0 +1,286 @@
+{
+  "MOT-E01": {
+    "url": "https://plc.damilab.cc/replay?task=MOT-E01&labels=0",
+    "first_scan": 0,
+    "last_frame_index": 157,
+    "source_duration_ms": 1570.0,
+    "motion_duration_seconds": 6,
+    "playback_speed": 0.26166666666666666,
+    "intro_hold_seconds": 0.5,
+    "outro_hold_seconds": 1,
+    "output_frames": 181,
+    "file": "assets/videos/MOT-E01.mp4",
+    "bytes": 128121,
+    "sha256": "9cf83efd2c2ac4e2fd2b221a7d013b7e4944c85a83ff9077ace00eca4b73679f",
+    "camera_shots": [
+      {
+        "at_fraction": 0,
+        "camera": [
+          1.3,
+          1.7,
+          2.6
+        ],
+        "target": [
+          0,
+          0.48,
+          0
+        ]
+      }
+    ],
+    "browser_errors": []
+  },
+  "MAT-E01": {
+    "url": "https://plc.damilab.cc/replay?task=MAT-E01&labels=0",
+    "first_scan": 0,
+    "last_frame_index": 62,
+    "source_duration_ms": 620.0,
+    "motion_duration_seconds": 6,
+    "playback_speed": 0.10333333333333333,
+    "intro_hold_seconds": 0.5,
+    "outro_hold_seconds": 1,
+    "output_frames": 181,
+    "file": "assets/videos/MAT-E01.mp4",
+    "bytes": 61889,
+    "sha256": "eb59721507d7901f08cd0467c0d681ffcb532eed52bd5cf419237ecf33e28095",
+    "camera_shots": [
+      {
+        "at_fraction": 0,
+        "camera": [
+          -1.03,
+          1.26,
+          0.73
+        ],
+        "target": [
+          -0.6,
+          0.9,
+          0
+        ]
+      }
+    ],
+    "browser_errors": []
+  },
+  "MOT-M14": {
+    "url": "https://plc.damilab.cc/replay?task=MOT-M14&labels=0",
+    "first_scan": 0,
+    "last_frame_index": 369,
+    "source_duration_ms": 3690.0,
+    "motion_duration_seconds": 9,
+    "playback_speed": 0.41,
+    "intro_hold_seconds": 0.5,
+    "outro_hold_seconds": 1,
+    "output_frames": 253,
+    "file": "assets/videos/MOT-M14.mp4",
+    "bytes": 316000,
+    "sha256": "efd006c1ed56de4ab8de7e2921857cc4a583eee16372120a27b8c25f8a4fddf3",
+    "camera_shots": [
+      {
+        "at_fraction": 0,
+        "camera": [
+          2.35,
+          2.25,
+          2.4
+        ],
+        "target": [
+          0.65,
+          0.52,
+          0
+        ]
+      }
+    ],
+    "browser_errors": []
+  },
+  "MAT-M04": {
+    "url": "https://plc.damilab.cc/replay?task=MAT-M04&labels=0",
+    "first_scan": 0,
+    "last_frame_index": 1279,
+    "source_duration_ms": 12790.0,
+    "motion_duration_seconds": 20,
+    "playback_speed": 0.6395,
+    "intro_hold_seconds": 0.5,
+    "outro_hold_seconds": 1,
+    "output_frames": 517,
+    "file": "assets/videos/MAT-M04.mp4",
+    "bytes": 620717,
+    "sha256": "02073b7b7d571a205e9bc667db7b544010032e58da483caca4d4cba2d3ed0bdf",
+    "camera_shots": [
+      {
+        "at_fraction": 0,
+        "camera": [
+          2.6,
+          2.3,
+          2.7
+        ],
+        "target": [
+          0,
+          0.95,
+          -0.1
+        ]
+      }
+    ],
+    "browser_errors": []
+  },
+  "MOT-H15": {
+    "url": "https://plc.damilab.cc/replay?task=MOT-H15&labels=0",
+    "first_scan": 0,
+    "last_frame_index": 3682,
+    "source_duration_ms": 73640.0,
+    "motion_duration_seconds": 24,
+    "playback_speed": 3.0683333333333334,
+    "intro_hold_seconds": 0.5,
+    "outro_hold_seconds": 1,
+    "output_frames": 613,
+    "file": "assets/videos/MOT-H15.mp4",
+    "bytes": 1073722,
+    "sha256": "7f5c619d77cd8fcf7dfb0cfbe52b95f0fac8328428d7cdb3b8367fd0dfee26d8",
+    "camera_shots": [
+      {
+        "at_fraction": 0.0,
+        "camera": [
+          6.8,
+          5.4,
+          -7.5
+        ],
+        "target": [
+          0.1,
+          0.9,
+          0.7
+        ]
+      },
+      {
+        "at_fraction": 0.19,
+        "camera": [
+          3,
+          3.1,
+          -2.2
+        ],
+        "target": [
+          0.8,
+          1.15,
+          1.4
+        ]
+      },
+      {
+        "at_fraction": 0.43,
+        "camera": [
+          6.8,
+          5.4,
+          -7.5
+        ],
+        "target": [
+          0.1,
+          0.9,
+          0.7
+        ]
+      },
+      {
+        "at_fraction": 0.7,
+        "camera": [
+          6.8,
+          3.5,
+          -1.6
+        ],
+        "target": [
+          4.1,
+          1.6,
+          1.3
+        ]
+      },
+      {
+        "at_fraction": 0.88,
+        "camera": [
+          6.8,
+          5.4,
+          -7.5
+        ],
+        "target": [
+          0.1,
+          0.9,
+          0.7
+        ]
+      }
+    ],
+    "browser_errors": []
+  },
+  "MAT-H01": {
+    "url": "https://plc.damilab.cc/replay?task=MAT-H01&labels=0",
+    "first_scan": 0,
+    "last_frame_index": 10290,
+    "source_duration_ms": 102900.0,
+    "motion_duration_seconds": 32,
+    "playback_speed": 3.215625,
+    "intro_hold_seconds": 0.5,
+    "outro_hold_seconds": 1,
+    "output_frames": 805,
+    "file": "assets/videos/MAT-H01.mp4",
+    "bytes": 2216837,
+    "sha256": "b6e1fef82823158b771d2fcf9dee8e2c9b2411cca4421aa0c521d2b64da60f9c",
+    "camera_shots": [
+      {
+        "at_fraction": 0.0,
+        "camera": [
+          4.6,
+          3.8,
+          -4.4
+        ],
+        "target": [
+          0.4,
+          1,
+          0
+        ]
+      },
+      {
+        "at_fraction": 0.14,
+        "camera": [
+          2.8,
+          2.9,
+          -3.5
+        ],
+        "target": [
+          0.2,
+          1.2,
+          -0.4
+        ]
+      },
+      {
+        "at_fraction": 0.38,
+        "camera": [
+          4.6,
+          3.8,
+          -4.4
+        ],
+        "target": [
+          0.4,
+          1,
+          0
+        ]
+      },
+      {
+        "at_fraction": 0.69,
+        "camera": [
+          4.2,
+          3.4,
+          -3.6
+        ],
+        "target": [
+          1.9,
+          0.9,
+          -0.8
+        ]
+      },
+      {
+        "at_fraction": 0.87,
+        "camera": [
+          4.6,
+          3.8,
+          -4.4
+        ],
+        "target": [
+          0.4,
+          1,
+          0
+        ]
+      }
+    ],
+    "browser_errors": []
+  }
+}
